@@ -13,7 +13,7 @@ function initializeCode() {
     "<h1>Hello! Here is some wiki about dog's breeds</h1>";
 }
 
-//function wikiItem(headerW, textW, imgSrc){/7771111   sdf
+//function wikiItem(headerW, textW, imgSrc){/7771111   sdf  dfs
 let wiki_item = document.createElement("div");
 wiki_item.classList.add("wiki-item");
 document.body.appendChild(wiki_item);
