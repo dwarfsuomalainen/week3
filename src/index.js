@@ -9,8 +9,8 @@ if (document.readyState !== "loading") {
 }
 
 function initializeCode() {
-  document.getElementsByClassName("container").innerText =
-    "<h1>Hey, check is some wiki about five breeds of doggos :3 </h1>";
+  //document.getElementsByClassName("container").innerText =
+  //"<h1>Hey, check is some wiki about five breeds of doggos :3 </h1>";
   loadWiki();
 }
 
@@ -47,12 +47,13 @@ async function loadWiki() {
 }
 
 function wikiItem(headerW, textW, imgSrc) {
-  //let wiki_container = document.createElement("div");
-  //document.body.appendChild(wiki_container);
-  let container = document.getElementById("container");
+  let wiki_container = document.createElement("div");
+  wiki_container.classList.add("container");
+  document.body.appendChild(wiki_container);
+  //let container = document.getElementById("container");
   let wiki_item = document.createElement("div");
   wiki_item.classList.add("wiki-item");
-  container.appendChild(wiki_item);
+  wiki_container.appendChild(wiki_item);
   let wiki_header = document.createElement("h1");
   wiki_header.classList.add("wiki-header");
   wiki_header.innerHTML = headerW;
