@@ -73,5 +73,5 @@ function wikiItem(headerW, textW, imgSrc) {
   let wiki_img = document.createElement("img");
   wiki_img.classList.add("wiki-img");
   wiki_img.src = imgSrc;
-  wiki_content.appendChild(wiki_img);
+  img_container.appendChild(wiki_img);
 }
