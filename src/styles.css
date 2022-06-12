@@ -1,3 +1,37 @@
 body {
-  font-family: sans-serif;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  margin: auto;
+  align-content: center;
+}
+.wiki-header {
+  border-radius: 25px;
+  margin: auto;
+  align-content: center;
+  background-color: antiquewhite;
+  padding: 10px;
+}
+
+.wiki-item {
+  padding: 15px;
+  border-radius: 25px;
+  margin: auto;
+  align-content: center;
+  background-color: bisque;
+}
+
+.wiki-img {
+  padding: 15px;
+  border-radius: 25px;
+  margin: auto;
+  align-content: center;
+}
+
+.wiki-text {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  padding: 15px;
+  border-radius: 25px;
+  margin: auto;
+  align-content: center;
 }
