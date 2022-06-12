@@ -4,6 +4,15 @@ body {
   margin: auto;
   align-content: center;
 }
+h1 {
+  font-size: 45px;
+  border-radius: 25px;
+  margin: auto;
+  align-content: center;
+  background-color: antiquewhite;
+  padding: 10px;
+}
+
 .wiki-header {
   border-radius: 25px;
   margin: auto;

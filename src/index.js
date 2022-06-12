@@ -1,8 +1,5 @@
 import "./styles.css";
 
-//let imgSrc =
-//"https://dog.ceo/api/breed/Chihuahua/images/random";
-
 if (document.readyState !== "loading") {
   initializeCode();
 } else {
@@ -13,8 +10,7 @@ if (document.readyState !== "loading") {
 
 function initializeCode() {
   document.getElementById("app").innerHTML =
-    "<h1>Hello! Here is some wiki about dog's breeds</h1>";
-
+    "<h1>Hey, check is some wiki about five breeds of doggos :3 </h1>";
   loadWiki();
 }
 
@@ -51,9 +47,12 @@ async function loadWiki() {
 }
 
 function wikiItem(headerW, textW, imgSrc) {
+  let wiki_container = document.createElement("div");
+  wiki_container.classList.add("container");
+  document.body.appendChild(wiki_container);
   let wiki_item = document.createElement("div");
   wiki_item.classList.add("wiki-item");
-  document.body.appendChild(wiki_item);
+  wiki_container.appendChild(wiki_item);
   let wiki_header = document.createElement("h1");
   wiki_header.classList.add("wiki-header");
   wiki_header.innerHTML = headerW;
