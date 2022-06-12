@@ -1,7 +1,7 @@
 import "./styles.css";
 
-let imgSrc =
-  "https://scontent.fqlf1-2.fna.fbcdn.net/v/t1.18169-9/1236179_401999183232989_982212190_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=e3f864&_nc_ohc=ATdNTO2_QMUAX8LAhXU&_nc_ht=scontent.fqlf1-2.fna&oh=00_AT90puE-ZA4tw5SLBczycNOE8Wly6J6a9QX8QTAdRRp09Q&oe=62CA77B7";
+//let imgSrc =
+//"https://dog.ceo/api/breed/Chihuahua/images/random";
 
 if (document.readyState !== "loading") {
   initializeCode();
@@ -19,15 +19,35 @@ function initializeCode() {
 }
 
 async function loadWiki() {
-  let url =
-    "https://en.wikipedia.org/api/rest_v1/page/summary/Bracco_Italiano?redirect=true";
-  let response = await fetch(url);
+  let url = [
+    "https://en.wikipedia.org/api/rest_v1/page/summary/Chihuahua_%28dog%29?redirect=true",
+    "https://en.wikipedia.org/api/rest_v1/page/summary/Borzoi?redirect=true",
+    "https://en.wikipedia.org/api/rest_v1/page/summary/Papillon_dog?redirect=true",
+    "https://en.wikipedia.org/api/rest_v1/page/summary/Saluki?redirect=true",
+    "https://en.wikipedia.org/api/rest_v1/page/summary/vizsla?redirect=true"
+  ];
+  let urlPic = [
+    "https://dog.ceo/api/breed/chihuahua/images/random",
+    "https://dog.ceo/api/breed/borzoi/images/random",
+    "https://dog.ceo/api/breed/papillon/images/random",
+    "https://dog.ceo/api/breed/saluki/images/random",
+    "https://dog.ceo/api/breed/vizsla/images/random"
+  ];
+  for (let i = 0; i < url.length; i++) {
+    let response = await fetch(url[i]);
 
-  let breed = await response.json();
-  console.log(breed);
-  let headerW = breed.title;
-  let textW = breed.extract;
-  wikiItem(headerW, textW, imgSrc);
+    let breed = await response.json();
+    console.log(breed);
+    let headerW = breed.title;
+    let textW = breed.extract;
+
+    let responsePic = await fetch(urlPic[i]);
+
+    let imgDog = await responsePic.json();
+    let imgSrc = imgDog.message;
+
+    wikiItem(headerW, textW, imgSrc);
+  }
 }
 
 function wikiItem(headerW, textW, imgSrc) {
