@@ -11,8 +11,10 @@ if (document.readyState !== "loading") {
 }
 
 function initializeCode() {
-  //document.getElementsByClassName("container").innerText =
-  //"<h1>Hey, check is some wiki about five breeds of doggos :3 </h1>";
+  let page_h = document.createElement("h1");
+  page_h.innerHTML =
+    "<h1>Hey, check out some wiki about five breeds of doggos :3 </h1>";
+  document.body.appendChild(page_h);
 
   wiki_container.classList.add("container");
   document.body.appendChild(wiki_container);
@@ -52,7 +54,6 @@ async function loadWiki() {
 }
 
 function wikiItem(headerW, textW, imgSrc) {
-  //let container = document.getElementById("container");
   let wiki_item = document.createElement("div");
   wiki_item.classList.add("wiki-item");
   wiki_container.appendChild(wiki_item);

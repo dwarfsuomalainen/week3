@@ -5,12 +5,19 @@ body {
   align-content: center;
 }
 h1 {
+  box-shadow: 5px 5px 5px grey;
   font-size: 45px;
   border-radius: 25px;
   margin: auto;
   align-content: center;
   background-color: antiquewhite;
   padding: 10px;
+  border: solid 2px gray;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .wiki-header {
@@ -22,18 +29,27 @@ h1 {
 }
 
 .wiki-item {
-  padding: 15px;
+  box-shadow: 10px 5px 5px grey;
+  padding: 15px 15px 15px 15px;
   border-radius: 25px;
-  margin: auto;
+  margin-right: 20px;
+  margin-left: 20px;
   align-content: center;
   background-color: bisque;
 }
 
 .wiki-img {
-  padding: 15px;
+  padding: auto;
   border-radius: 25px;
-  margin: auto;
-  align-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 100%;
+}
+
+.wiki-content {
+  padding: 15px 15px 15px 15px;
+  display: flex;
+  flex-flow: row-reverse;
 }
 
 .wiki-text {
@@ -42,5 +58,13 @@ h1 {
   padding: 15px;
   border-radius: 25px;
   margin: auto;
-  align-content: center;
+  width: 50%;
+  min-width: 50%;
+  max-width: 50%;
+}
+
+.img-container {
+  width: 50%;
+  min-width: 50%;
+  max-width: 50%;
 }
